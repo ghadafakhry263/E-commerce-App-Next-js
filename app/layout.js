@@ -1,7 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./_components/Header";
 
-const geistSans = Geist({
+const playfair= Playfair({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -20,8 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfair.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>

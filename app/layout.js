@@ -1,16 +1,14 @@
-import { Playfair, Geist_Mono } from "next/font/google";
+import { Playfair } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 
 const playfair= Playfair({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight:["400","500"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${geistMono.variable} antialiased`}
+        className={`${playfair.variable} antialiased`}
       >
         <Header />
         {children}

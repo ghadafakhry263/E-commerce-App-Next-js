@@ -1,0 +1,47 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Margherita Pizza",
+      "image": "/product-2.png",
+      "price": 60,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni Pizza",
+      "image": "/product-1.png",
+      "price": 75,
+      "quantity": 1
+    },
+     {
+    "id": 3,
+    "name": "BBQ Chicken Pizza",
+    "image": "/product-5.png",
+    "price": 85,
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "name": "Vegetarian Pizza",
+    "image": "/product-4.png",
+    "price": 65,
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "name": "Four Cheese Pizza",
+    "image": "/product-3.png",
+    "price": 80,
+    "quantity": 1
+  },
+    {
+    "id": 6,
+    "name": "Four Cheese Pizza",
+    "image": "/product-2.png",
+    "price": 80,
+    "quantity": 1
+  }
+  
+  ]
+}

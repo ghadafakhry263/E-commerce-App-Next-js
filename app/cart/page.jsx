@@ -10,12 +10,13 @@ export default function CartPage() {
   const { items, delivery, discount } = useSelector((state) => state.cart);
   const [promoCode, setPromoCode] = useState('');
   const [applied, setApplied] = useState(false);
- 
 
+  // Calculate totals
   const subtotal = items.reduce((total, item) => total + item.totalPrice, 0);
   const tax = subtotal * 0.14;
+  // Calculate total price after applying delivery and discount
   const total = subtotal + tax + delivery - discount;
-
+// Handle promo code application
   const handleApplyPromo = () => {
     if (promoCode === 'GHADA10') {
       dispatch(applyDiscount(10));

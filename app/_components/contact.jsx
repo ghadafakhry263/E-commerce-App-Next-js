@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div id="contact" className="relativ py-20 px-[200] sm:px-8 lg:px-16  bg-orange-100">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div id="contact" className="relativ py-20 px-[200] sm:px-8 lg:px-16   max-w-[900px] mx-auto">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
         {/* البيانات */}
         <div>
           <h2 className="text-4xl font-bold text-primary font-palyfair mb-6">Contact Now</h2>
@@ -80,36 +80,36 @@ const Contact = () => {
         </div>
 
         {/* الصورة */}
-        <div className="relative flex justify-center items-center">
-          <img
-            src="/contact-img.png"
-            alt="Contact"
-            className="max-w-full w-[400px] h-auto"
-          />
+        <div className="relative flex justify-center items-center group">
+  <img
+    src="/contact-img.png"
+    alt="Contact"
+    className="max-w-full w-[400px] h-auto transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+  />
 
-          {/* استيكرات */}
-          <img
-            src="/sticker-tomato.svg"
-            alt="Tomato Sticker"
-            className="absolute top-[-20px] left-[-20px] w-12 h-12"
-          />
-          <img
-            src="/sticker-mushroom.svg"
-            alt="Mushroom Sticker"
-            className="absolute bottom-[20px] right-[30px] w-10 h-10"
-          />
-          <img
-            src="/sticker-onion.svg"
-            alt="Onion Sticker"
-            className="absolute top-[30px] right-[10px] w-10 h-10"
-          />
-           <img
-            src="/sticker-onion.svg"
-            alt="Onion Sticker"
-            className="absolute top-[50px] right-[30px] w-10 h-10"
-          />
-        </div>
-      </div>
+  {/* استيكرات */}
+  <img
+    src="/sticker-tomato.svg"
+    alt="Tomato Sticker"
+    className="absolute top-[-20px] left-[-20px] w-12 h-12"
+  />
+  <img
+    src="/sticker-mushroom.svg"
+    alt="Mushroom Sticker"
+    className="absolute bottom-[20px] right-[30px] w-10 h-10"
+  />
+  <img
+    src="/sticker-onion.svg"
+    alt="Onion Sticker"
+    className="absolute top-[30px] right-[10px] w-10 h-10"
+  />
+  <img
+    src="/sticker-onion.svg"
+    alt="Onion Sticker"
+    className="absolute top-[50px] right-[30px] w-10 h-10"
+  />
+</div>
+</div>
     </div>
   );
 };

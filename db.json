@@ -5,42 +5,130 @@
       "name": "Margherita Pizza",
       "image": "/product-2.png",
       "price": 60,
-      "quantity": 1
+      "quantity": 1,
+      "description": "A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own.",
+       "ingredients": [
+    {
+      "name": "Mozzarella Cheese",
+      "image": "/ingridiant/home-mushroom.png"
+    },
+    {
+      "name": "Tomato Sauce",
+      "image": "/ingridiant/home-tomato.png"
+    },
+    {
+      "name": "Fresh Basil",
+      "image": "/ingridiant/recipe-tomato.png"
+    }
+  ]
+
+
     },
     {
       "id": 2,
       "name": "Pepperoni Pizza",
       "image": "/product-1.png",
       "price": 75,
-      "quantity": 1
+      "quantity": 1,
+      "description": "A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own.",
+       "ingredients": [
+   {
+      "name": "Mozzarella Cheese",
+      "image": "/ingridiant/home-mushroom.png"
+    },
+    {
+      "name": "Tomato Sauce",
+      "image": "/ingridiant/home-tomato.png"
+    },
+    {
+      "name": "Fresh Basil",
+      "image": "/ingridiant/recipe-tomato.png"
+    }
+  ]
+
+
     },
      {
     "id": 3,
     "name": "BBQ Chicken Pizza",
     "image": "/product-5.png",
     "price": 85,
-    "quantity": 1
+    "quantity": 1,
+    "description": "A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own."
+,
+ "ingredients": [
+   {
+      "name": "Mozzarella Cheese",
+      "image": "/ingridiant/home-mushroom.png"
+    },
+    {
+      "name": "Tomato Sauce",
+      "image": "/ingridiant/home-tomato.png"
+    },
+    {
+      "name": "Fresh Basil",
+      "image": "/ingridiant/recipe-tomato.png"
+    }
+  ]
+
   },
   {
     "id": 4,
     "name": "Vegetarian Pizza",
     "image": "/product-4.png",
     "price": 65,
-    "quantity": 1
+    "quantity": 1,
+    "description": "A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own."
+
+
   },
   {
     "id": 5,
     "name": "Four Cheese Pizza",
     "image": "/product-3.png",
     "price": 80,
-    "quantity": 1
+    "quantity": 1,
+    "description": "A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own."
+,
+ "ingredients": [
+    {
+      "name": "Mozzarella Cheese",
+      "image": "/ingridiant/home-mushroom.png"
+    },
+    {
+      "name": "Tomato Sauce",
+      "image": "/ingridiant/home-tomato.png"
+    },
+    {
+      "name": "Fresh Basil",
+      "image": "/ingridiant/recipe-tomato.png"
+    }
+  ]
+
   },
     {
     "id": 6,
     "name": "Four Cheese Pizza",
     "image": "/product-2.png",
     "price": 80,
-    "quantity": 1
+    "quantity": 1,
+    "description":"A delicious pizza topped with rich tomato sauce, creamy mozzarella cheese, and your choice of fresh toppings. Baked to perfection with a golden crust for a delightful crunch. Perfect for sharing or enjoying on your own."
+,
+ "ingredients": [
+    {
+      "name": "Mozzarella Cheese",
+      "image": "/ingridiant/home-mushroom.png"
+    },
+    {
+      "name": "Tomato Sauce",
+      "image": "/ingridiant/home-tomato.png"
+    },
+    {
+      "name": "Fresh Basil",
+      "image": "/ingridiant/recipe-tomato.png"
+    }
+  ]
+
   }
   
   ]

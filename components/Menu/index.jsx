@@ -13,9 +13,10 @@ import {
 import { Label } from "../ui/label";
 import { Checkbox } from "../ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
- import { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cartSlice";
+import Link from "next/link";
 const sizes = [
   { id: 1, name: "small ", price: 0 },
   { id: 2, name: "Meduim ", price: 4 },
@@ -29,7 +30,7 @@ const extra = [
 ];
 
 const Menu = ({ pizza }) => {
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedExtras, setSelectedExtras] = useState([]);
@@ -53,11 +54,15 @@ const Menu = ({ pizza }) => {
   return (
     <div>
       <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-105 transition duration-300  max-w-sm mx-auto">
-        <img
+       <Link href={`/Products/${pizza.id}`}>
+       <img
+  
           src={pizza.image}
           alt={pizza.name}
           className="w-[300px] h-70 object-cover"
         />
+       </Link>
+        
         <div className="p-4">
           <h3 className="text-xl font-semibold text-gray-800">{pizza.name}</h3>
           <p className="text-gray-600">
@@ -65,68 +70,73 @@ const Menu = ({ pizza }) => {
             <span className="text-black font-medium">{pizza.price} EGP</span>
           </p>
 
-<Dialog>
-  <>
-    <form onSubmit={(e) => e.preventDefault()}>
-      <DialogTrigger asChild>
-        <Button className="mt-3 w-full bg-primary text-white py-2 rounded-xl hover:bg-orange-900">
-          Add to Cart
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            <div>
-              <img
-                src={pizza.image}
-                alt={pizza.name}
-                className="w-50 rounded-full m-auto h-55 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-gray-900 text-center">
-                {pizza.name}
-              </h3>
-              <p className="text-gray-800 text-center">
-                Price:{" "}
-                <span className="text-black font-medium  text-center">
-                  {pizza.price} EGP
-                </span>
-              </p>
-            </div>
-          </DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4">
-          <div className="grid gap-3 text-center font-bold">
-            <Label>Pick your size </Label>
-            <Bigsize sizes={sizes} pizza={pizza}   selectedSize={selectedSize}
-      setSelectedSize={setSelectedSize}>
-            </Bigsize>
-            <Label>Extra Additional </Label>
-            <Extra extra={extra} selectedExtras={selectedExtras}
-      setSelectedExtras={setSelectedExtras} />
-          </div>
-          <div className="grid gap-3"></div>
-        </div>
-        <DialogFooter>
-          <DialogClose asChild>
-            <Button  onClick={handleAddToCart} className="mt-3 w-full bg-primary text-white py-2 rounded-xl hover:bg-orange-600">
-              Add to cart
-            </Button>
-          </DialogClose>
-        </DialogFooter>
-      </DialogContent>
-    </form>
-  </>
-</Dialog>
+          <Dialog>
+            <>
+              <form onSubmit={(e) => e.preventDefault()}>
+                <DialogTrigger asChild>
+                  <Button className="mt-3 w-full bg-primary text-white py-2 rounded-xl hover:bg-orange-900">
+                    Add to Cart
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle> Choose size & Gradiant </DialogTitle>
+                    <DialogDescription>
+                      <div>
+                        <img
+                          src={pizza.image}
+                          alt={pizza.name}
+                          className="w-50 rounded-full m-auto h-55 object-cover"
+                        />
+                        <h3 className="text-xl font-semibold text-gray-900 text-center">
+                          {pizza.name}
+                        </h3>
+                        <p className="text-gray-800 text-center">
+                          Price:{" "}
+                          <span className="text-black font-medium  text-center">
+                            {pizza.price} EGP
+                          </span>
+                        </p>
+                      </div>
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="grid gap-4">
+                    <div className="grid gap-3 text-center font-bold">
+                      <Label>Pick your size </Label>
+                      <Bigsize
+                        sizes={sizes}
+                        pizza={pizza}
+                        selectedSize={selectedSize}
+                        setSelectedSize={setSelectedSize}
+                      ></Bigsize>
+                      <Label>Extra Additional </Label>
+                      <Extra
+                        extra={extra}
+                        selectedExtras={selectedExtras}
+                        setSelectedExtras={setSelectedExtras}
+                      />
+                    </div>
+                    <div className="grid gap-3"></div>
+                  </div>
+                  <DialogFooter>
+                    <DialogClose asChild>
+                      <Button
+                        onClick={handleAddToCart}
+                        className="mt-3 w-full bg-primary text-white py-2 rounded-xl hover:bg-orange-600"
+                      >
+                        Add to cart
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </form>
+            </>
+          </Dialog>
         </div>
       </div>
     </div>
   );
 };
-
-
-
-
 
 export default Menu;
 
@@ -140,7 +150,10 @@ export function Bigsize({ sizes, pizza, selectedSize, setSelectedSize }) {
       }}
     >
       {sizes.map((size) => (
-        <div key={size.id} className="flex items-center gap-2  mb-3 border border-gray-300 rounded-2xl p-2">
+        <div
+          key={size.id}
+          className="flex items-center gap-2  mb-3 border border-gray-300 rounded-2xl p-2"
+        >
           <RadioGroupItem value={size.name} id={`size-${size.id}`} />
           <Label htmlFor={`size-${size.id}`}>
             {size.name} {size.price + pizza.price} EGP
